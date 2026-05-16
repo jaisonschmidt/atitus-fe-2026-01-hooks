@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { Hello } from "./components/Hello";
 
 function App() {
+  // inicializei um estado com o valor inicial false
+  // desconstrução de array
+  const [userState, setUserState] = useState(false);
+  // neste momento, userState está com valor false
+
   // useEffect permite controlar/detectar o ciclo de vida de um componente
   useEffect(()=>{
     console.log("O componente foi montado");
@@ -11,10 +16,6 @@ function App() {
   useEffect(()=>{
     console.log("O estado do usuário mudou para: ", userState);
   }, [userState]);
-  // inicializei um estado com o valor inicial false
-  // desconstrução de array
-  const [userState, setUserState] = useState(false);
-  // neste momento, userState está com valor false
 
   /*
     setTimeout(function(){
